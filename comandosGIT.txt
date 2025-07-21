@@ -2,21 +2,29 @@ This error means your local branch is behind the remote branch (there are change
  that you don't have locally). Here's how to fix it:
 Option 1: Pull First, Then Push (Recommended)
 1. Pull the remote changes:
-cmd git pull origin main
+git pull origin main
+
 2. If there are merge conflicts, resolve them, then:
-cmd git add .
+git add .
 git commit -m "Merge remote changes"
 3. Push your changes:
-cmd git push -u origin main
+
+git push -u origin main
+
 Option 2: Force Push (Only if you want to overwrite remote changes)
 ⚠️ Warning: This will delete any changes that exist on GitHub but not on your local machine.
-cmd git push -u origin main --force
+
+git push -u origin main --force
+
 Option 3: Check What's Different First
 1. See what's on the remote that you don't have:
-cmd git fetch origin
+git fetch origin
+
 git log HEAD..origin/main --oneline
 2. See what you have locally that's not on remote:
-cmd git log origin/main..HEAD --oneline
+
+git log origin/main..HEAD --oneline
+
 This helps you understand what changes will be merged.
 Most Common Scenario:
 If you created the repository on GitHub with a README file or license, and you're now trying
@@ -88,3 +96,9 @@ git commit -m "recordando git"
 git push -u origin main 
 tratar de no hacer : git push -u origin main --force
 git 
+
+
+__ cambiar repositorio
+git remote remove origin
+git remote add origin "repo@..."
+git pull origin main --allow-unrelated-histories
