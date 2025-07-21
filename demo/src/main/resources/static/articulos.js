@@ -1,6 +1,6 @@
 // URL base para las APIs
-//const baseUrl = 'https://firstattempspring-production.up.railway.app/api/articulos';
-const baseUrl = 'http://localhost:8080/api/articulos';
+const baseUrl = 'https://springweb1-production.up.railway.app/api/articulos';
+//const baseUrl = 'http://localhost:8080/api/articulos';
 // Cargar artículos al iniciar la página
 document.addEventListener('DOMContentLoaded', () => {
     cargarArticulos();
